@@ -7,6 +7,7 @@ namespace Aula97ap
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Bom dia Gilvan oi");
         }
     }
 }
