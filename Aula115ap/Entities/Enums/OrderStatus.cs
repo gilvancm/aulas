@@ -12,4 +12,6 @@ namespace Aula115ap.Entities.Enums
         Delivered = 3
 
     }
+
+    // acima são as constantes
 }

@@ -30,6 +30,8 @@ namespace Aula115ap
             Console.WriteLine();
             Console.WriteLine("imprime do formato string para o enumerado    "+os);
 
+            //estereoticco na liguagem UML é << >>
+
 
         }
     }
