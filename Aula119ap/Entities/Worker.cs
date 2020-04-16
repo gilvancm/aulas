@@ -24,6 +24,7 @@ namespace Aula119ap.Entities
         }
 
 
+
         public void AddContract(HourContract contract)
         {
             Contracts.Add(contract);
