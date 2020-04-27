@@ -12,6 +12,22 @@ namespace Aula129ap
             Console.WriteLine("sobreposição / subscrita  usa na função superclasse a prefix virtual e na subclasse override");
             Console.WriteLine("usando base pra Herda da Superclasse os atributos ");
             Console.WriteLine();
+            /*
+              Em Programação Orientada a Objetos, polimorfismo é recurso que permite
+              que variáveis de um mesmo tipo mais genérico possam apontar para objetos
+              de tipos específicos diferentes, tendo assim comportamentos diferentes
+              conforme cada tipo específico.
+              
+            Account acc1 = new Account(1001, "Alex", 500.0);
+            Account acc2 = new SavingsAccount(1002, "Anna", 500.0, 0.01);
+            
+            acc1.Withdraw(10.0);
+            acc2.Withdraw(10.0);
+            
+            Console.WriteLine(acc1.Balance);
+            Console.WriteLine(acc2.Balance);
+
+            */
             Console.WriteLine("Polimofismo e que mostramos abaixo criando ");
             Console.WriteLine("3 variaveis comum do mesmo tipo, recebendo valores diferente criando 3 objetos na memoria com valores diferentes");
             Console.WriteLine(" com metodos com resultados indepentes ou diferentes ");
