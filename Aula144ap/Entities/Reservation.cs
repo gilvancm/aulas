@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
+using Aula144ap.Entities.Exceptions;
 
 namespace Aula144ap.Entities
 {
@@ -17,6 +18,11 @@ namespace Aula144ap.Entities
 
         public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {
+                throw new DomainException("Error in reservation: Check-out date must be after check-in date ");
+            }
+
             RoomNumber = roomNumber;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -28,22 +34,23 @@ namespace Aula144ap.Entities
             return (int)duration.TotalDays;
         }
 
-        public string UpdateDates(DateTime checkIn, DateTime checkOut)
+        public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
             // recortei acondição pra qui retoranando o valor nule depois de pronto atraavez de string
             if (checkIn < CheckIn || checkOut < CheckOut)
             {
-                return "Error in reservation: Reservation dates for update must be future dates: ";
+               // throw é lançar 
+                throw new DomainException("Error in reservation: Reservation dates for update must be future dates: ");
             }
             else if (checkOut <= checkIn)
             {
-                return "Error in reservation: Check-out date must be after check-in date ";
+                throw new DomainException("Error in reservation: Check-out date must be after check-in date ");
             }
 
             CheckIn = checkIn;
             CheckOut = checkOut;
 
-            return null;
+          
         }
 
         public override string ToString()
